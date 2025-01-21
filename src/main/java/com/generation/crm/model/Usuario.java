@@ -82,6 +82,14 @@ public class Usuario {
 	public void setFoto(String foto) {
 		this.foto = foto;
 	}
+
+	public List<Plano> getPlano() {
+		return plano;
+	}
+
+	public void setPlano(List<Plano> plano) {
+		this.plano = plano;
+	}
 	
 	
 	
