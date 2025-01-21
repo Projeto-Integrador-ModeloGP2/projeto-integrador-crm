@@ -1,5 +1,7 @@
 package com.generation.crm.model;
 
+
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Entity;
@@ -37,11 +39,11 @@ public class Plano {
 	private String franquia;
 	
 	@ManyToOne
-	@JsonIgnoreProperties("Plano")
+	@JsonIgnoreProperties("plano")
 	private Usuario usuario;
 	
 	@ManyToOne
-	@JsonIgnoreProperties("Plano")
+	@JsonIgnoreProperties("plano")
 	private Seguradora seguradora;
 
 	public Long getId() {

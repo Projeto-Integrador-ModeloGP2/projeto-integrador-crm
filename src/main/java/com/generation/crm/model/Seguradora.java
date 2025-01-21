@@ -34,7 +34,7 @@ public class Seguradora {
 	private String cnpj;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "seguradora", cascade = CascadeType.REMOVE)
-	@JsonIgnoreProperties("Seguradora")
+	@JsonIgnoreProperties("seguradora")
 	private List<Plano> plano;
 
 	public Long getId() {
