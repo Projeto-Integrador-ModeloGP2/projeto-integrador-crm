@@ -13,6 +13,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "tb_seguradoras")
@@ -29,6 +30,7 @@ public class Seguradora {
 	private String especialidade;
 	
 	@NotNull(message = "O Atributo CNPJ é Obrigatório!")
+	@Size(min = 14, max = 14, message = "O atributo CNPJ deve conter 14 caracteres.")
 	private String cnpj;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "seguradora", cascade = CascadeType.REMOVE)

@@ -24,7 +24,6 @@ public class Plano {
 	private String nome;
 	
 	@NotNull(message = "O Atributo Descrição é Obrigatório!")
-	@Size(min = 8, max = 50, message = "A Descrição deve ter no mínimo 8 caracteres e no máximo 50 caracteres")
 	private String descricao;
 	
 	@NotBlank(message = "O Atributo Valor é Obrigatório!")
@@ -99,6 +98,14 @@ public class Plano {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+
+	public Seguradora getSeguradora() {
+		return seguradora;
+	}
+
+	public void setSeguradora(Seguradora seguradora) {
+		this.seguradora = seguradora;
 	}
 	
 	
