@@ -9,6 +9,6 @@ import com.generation.crm.model.Seguradora;
 
 public interface SeguradoraRepository extends JpaRepository<Seguradora, Long> {
 	
-	public List<Seguradora> findAllByDescricaoContainingIgnoreCase(@Param("nome") String nome);
+	public List<Seguradora> findAllByNomeContainingIgnoreCase(@Param("nome") String nome);
 
 }

@@ -9,6 +9,6 @@ import com.generation.crm.model.Plano;
 
 public interface PlanoRepository extends JpaRepository <Plano, Long> {
 	
-	public List <Plano> findAllByTituloContainingIgnoreCase(@Param("nome") String nome);
+	public List <Plano> findAllByNomeContainingIgnoreCase(@Param("nome") String nome);
 	
 }

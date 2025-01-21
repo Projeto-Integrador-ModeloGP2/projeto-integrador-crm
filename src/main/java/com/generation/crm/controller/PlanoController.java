@@ -48,7 +48,7 @@ public class PlanoController {
 	
 	@GetMapping("/nome/{nome}")
 	public ResponseEntity<List<Plano>> getByTitulo(@PathVariable String nome) {
-		return ResponseEntity.ok(planoRepository.findAllByTituloContainingIgnoreCase(nome));
+		return ResponseEntity.ok(planoRepository.findAllByNomeContainingIgnoreCase(nome));
 	}
 	
 	@PostMapping
