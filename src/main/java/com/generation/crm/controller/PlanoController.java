@@ -21,6 +21,7 @@ import org.springframework.web.server.ResponseStatusException;
 import com.generation.crm.model.Plano;
 import com.generation.crm.repository.PlanoRepository;
 import com.generation.crm.repository.SeguradoraRepository;
+import com.generation.crm.service.PlanoService;
 
 import jakarta.validation.Valid;
 
@@ -30,6 +31,9 @@ import jakarta.validation.Valid;
 public class PlanoController {
 	@Autowired
 	private PlanoRepository planoRepository;
+	
+	@Autowired
+    private PlanoService planoService;
 	
 	@Autowired
 	private SeguradoraRepository seguradoraRepository;
@@ -86,5 +90,19 @@ public class PlanoController {
 		
 		planoRepository.deleteById(id);
 	}
+	
+	// Endpoint para ativar um plano
+    @PutMapping("/{id}/ativar")
+    public ResponseEntity<Plano> ativarPlano(@PathVariable Long id) {
+        Plano plano = planoService.ativarPlano(id);
+        return ResponseEntity.ok(plano);
+    }
+
+    // Endpoint para desativar um plano
+    @PutMapping("/{id}/desativar")
+    public ResponseEntity<Plano> desativarPlano(@PathVariable Long id) {
+        Plano plano = planoService.desativarPlano(id);
+        return ResponseEntity.ok(plano);
+    }
 	
 }

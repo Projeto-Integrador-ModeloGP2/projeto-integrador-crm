@@ -38,6 +38,8 @@ public class Plano {
 	@NotNull(message = "O Atributo da Franquia é Obrigatorio!")
 	private String franquia;
 	
+	private boolean status;
+	
 	@ManyToOne
 	@JsonIgnoreProperties("plano")
 	private Usuario usuario;
@@ -94,6 +96,22 @@ public class Plano {
 		this.franquia = franquia;
 	}
 
+	public boolean isStatus() {
+		return status;
+	}
+	
+	public void ativarStatus() {
+        this.status = true;
+    }
+
+    public void desativarStatus() {
+        this.status = false;
+    }
+
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+
 	public Usuario getUsuario() {
 		return usuario;
 	}
@@ -109,7 +127,5 @@ public class Plano {
 	public void setSeguradora(Seguradora seguradora) {
 		this.seguradora = seguradora;
 	}
-	
-	
 	
 }
