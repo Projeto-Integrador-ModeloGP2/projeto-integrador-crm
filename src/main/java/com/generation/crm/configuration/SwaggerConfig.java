@@ -24,14 +24,14 @@ public class SwaggerConfig {
                         .version("v0.0.1")
                         .license(new License()
                                 .name("Crm Soluções")
-                                .url("https://www.linkedin.com/in/henriquesilvaaa/"))
+                                .url(""))
                         .contact(new Contact()
-                                .name("Henrique da Silva de Andrade")
-                                .url("https://github.com/HenriqueAndras1")
-                                .email("henriquesaa10@gmail.com")))
+                                .name("Crm Soluções")
+                                .url("")
+                                .email("projetojava79@gmail.com")))
                 .externalDocs(new ExternalDocumentation()
                         .description("Github")
-                        .url("https://github.com/HenriqueAndras1/"));
+                        .url("https://github.com/Projeto-Integrador-ModeloGP2"));
     }
     
     @Bean
